@@ -6,3 +6,22 @@
 	-webkit-font-smoothing: subpixel-antialiased;
 	@apply font-sans;
 }
+.ToggleGroup {
+	@apply flex flex-row w-full justify-around;
+}
+
+.ToggleGroupItem {
+	@apply bg-[#3f4f5e] flex text-grey-medium rounded-full items-center justify-center h-12 w-12;
+}
+.ToggleGroupItem:hover {
+	@apply bg-grey-light text-white;
+}
+.ToggleGroupItem[data-state="on"] {
+	@apply bg-orange text-white;
+}
+h1 {
+	@apply text-white font-bold text-3xl;
+}
+p {
+	@apply text-base text-grey-light w-[22rem];
+}
