@@ -2,6 +2,7 @@ import { useState } from "react";
 import Star from "/icon-star.svg";
 import Illustration from "/illustration.svg";
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
+import { motion } from "framer-motion";
 
 function App() {
 	const [isSubmited, setIsSubmited] = useState(false);
@@ -9,7 +10,22 @@ function App() {
 	return (
 		<div className="bg-blue-very_dark h-screen flex items-center">
 			{isSubmited ? (
-				<section className="bg-blue-dark flex flex-col gap-8 p-7 rounded-3xl w-fit m-auto items-center text-center">
+				<motion.section
+					initial={{ scale: 0 }}
+					animate={{ scale: 1 }}
+					exit={{
+						x: window.innerHeight,
+						opacity: 0,
+						scale: 0,
+						transition: { duration: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 260,
+						damping: 100,
+					}}
+					className="bg-blue-dark flex flex-col gap-8 p-7 rounded-3xl w-fit m-auto items-center text-center"
+				>
 					<div>
 						<img src={Illustration} alt="" />
 					</div>
@@ -22,9 +38,24 @@ function App() {
 						you ever need more support, don't hesitate to get in
 						touch!
 					</p>
-				</section>
+				</motion.section>
 			) : (
-				<main className="bg-blue-dark flex flex-col gap-5 p-7 rounded-3xl w-fit m-auto ">
+				<motion.main
+					initial={{ scale: 0 }}
+					animate={{ scale: 1 }}
+					exit={{
+						x: window.innerHeight,
+						opacity: 0,
+						scale: 0,
+						transition: { duration: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 260,
+						damping: 50,
+					}}
+					className="bg-blue-dark flex flex-col gap-5 p-7 rounded-3xl w-fit m-auto "
+				>
 					<div className="rounded-full bg-blue-dark contrast-75 w-fit p-4">
 						<img
 							src={Star}
@@ -68,7 +99,7 @@ function App() {
 					>
 						Submit
 					</button>
-				</main>
+				</motion.main>
 			)}
 		</div>
 	);
