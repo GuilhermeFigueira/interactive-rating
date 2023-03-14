@@ -38,6 +38,24 @@ function App() {
 						you ever need more support, don't hesitate to get in
 						touch!
 					</p>
+					<div className="text-center pt-4">
+						Challenge by{" "}
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+						>
+							Frontend Mentor
+						</a>
+						. Coded by{" "}
+						<a
+							href="https://github.com/guilhermefigueira"
+							target="_blank"
+							className="text-transparent bg-clip-text bg-gradient-to-r from-rose-700 to-sky-700 font-bold hover:text-lg hover:tracking-widest transition-all "
+						>
+							Guilherme Figueira
+						</a>
+						.
+					</div>
 				</motion.section>
 			) : (
 				<motion.main
@@ -99,6 +117,24 @@ function App() {
 					>
 						Submit
 					</button>
+					<div className="text-center pt-4">
+						Challenge by{" "}
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+						>
+							Frontend Mentor
+						</a>
+						. Coded by{" "}
+						<a
+							href="https://github.com/guilhermefigueira"
+							target="_blank"
+							className="text-transparent bg-clip-text bg-gradient-to-r from-rose-700 to-sky-700 font-bold hover:text-lg hover:tracking-widest transition-all "
+						>
+							Guilherme Figueira
+						</a>
+						.
+					</div>
 				</motion.main>
 			)}
 		</div>
